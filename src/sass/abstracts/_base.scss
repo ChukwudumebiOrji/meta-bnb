@@ -14,7 +14,7 @@
 
 body {
   font-size: 14px;
-  font-family: "Red Rose", cursive;
+  font-family: $font-family;
   font-weight: map-get($map: $font-weights, $key: normal);
 }
 

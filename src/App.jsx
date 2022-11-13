@@ -15,12 +15,14 @@ const App = () => {
       {modalIsOpen && <Modal setModalIsOpen={setModalIsOpen} />}
 
       <Header setModalIsOpen={setModalIsOpen} />
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/placetostay" element={<PlaceToStay />}></Route>
-        </Routes>
-      </Router>
+      <main>
+        <Router>
+          <Routes>
+            <Route path="/" element={<Home />}></Route>
+            <Route path="/marketplace" element={<PlaceToStay />}></Route>
+          </Routes>
+        </Router>
+      </main>
       <Footer />
     </>
   )

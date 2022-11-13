@@ -6,6 +6,7 @@
   --clr-white-text: #f1f3f9;
   --clr-footer-bg: #1d1d1e;
   --clr-gray-border: #cfd8dc;
+  --clr-purple: #a02279;
 }
 
 * {
@@ -60,7 +61,7 @@ li {
 .header div {
   border-radius: 0.5em;
   color: var(--clr-white-text);
-  background: linear-gradient(90deg, #a02279 11.45%, #a02279 11.45%);
+  background: var(--clr-purple);
   padding: 1em 1.5em;
 }
 @media only screen and (min-width: 768px) {
@@ -131,6 +132,200 @@ li {
 .modal__content__content div span {
   display: flex;
   align-items: center;
+}
+
+.home > * {
+  padding: 5vw;
+  max-width: 100vw;
+}
+.home > * img {
+  max-width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .home .section-1 div:last-of-type {
+    width: 75%;
+  }
+}
+.home .section-1 h1 {
+  font-size: 28px;
+}
+@media only screen and (min-width: 768px) {
+  .home .section-1 h1 {
+    font-size: 42px;
+  }
+}
+@media only screen and (min-width: 1366px) {
+  .home .section-1 h1 {
+    font-size: 56px;
+  }
+}
+.home .section-1 span {
+  color: var(--clr-purple);
+}
+.home .section-1 p {
+  margin: 1.2em 0;
+  line-height: 26.25px;
+}
+@media only screen and (min-width: 768px) {
+  .home .section-1 p {
+    font-size: 28px;
+    line-height: 35px;
+  }
+}
+.home .section-1 .input {
+  border: 1px solid var(--clr-gray-border);
+  display: flex;
+  align-items: center;
+  border-radius: 0.5em 0 0 0.5em;
+}
+.home .section-1 input {
+  border: none;
+  width: 100%;
+  padding: 1em;
+  outline: none;
+}
+.home .section-1 button {
+  padding: 1em 2.5em;
+  background-color: var(--clr-purple);
+  color: var(--clr-white-text);
+  border: none;
+  border-radius: 0 0.5em 0.5em 0;
+  font-family: "Red Rose", cursive;
+}
+@media only screen and (min-width: 768px) {
+  .home .section-1 {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .home .section-1 div:has(img) {
+    margin-left: 3em;
+  }
+}
+.home .banner {
+  background-color: var(--clr-purple);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+.home .banner * {
+  height: 18px;
+}
+@media only screen and (min-width: 768px) {
+  .home .banner * {
+    height: 20.34px;
+  }
+}
+@media only screen and (min-width: 1366px) {
+  .home .banner * {
+    height: 40.5px;
+  }
+}
+.home .section-2 {
+  text-align: center;
+}
+.home .section-2 h1 {
+  font-size: 24px;
+}
+@media only screen and (min-width: 768px) {
+  .home .section-2 h1 {
+    font-size: 36px;
+  }
+}
+@media only screen and (min-width: 1366px) {
+  .home .section-2 h1 {
+    font-size: 48px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .home .section-2 .mkt-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (min-width: 1366px) {
+  .home .section-2 .mkt-items {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.home .section-3 {
+  background-color: var(--clr-purple);
+  color: var(--clr-white-text);
+}
+@media only screen and (min-width: 768px) {
+  .home .section-3 div:last-of-type {
+    width: 75%;
+  }
+}
+.home .section-3 h1 {
+  font-size: 28px;
+}
+@media only screen and (min-width: 768px) {
+  .home .section-3 h1 {
+    font-size: 42px;
+  }
+}
+@media only screen and (min-width: 1366px) {
+  .home .section-3 h1 {
+    font-size: 56px;
+  }
+}
+.home .section-3 p {
+  margin: 1.2em 0;
+  line-height: 26.25px;
+}
+@media only screen and (min-width: 768px) {
+  .home .section-3 p {
+    line-height: 35px;
+  }
+}
+.home .section-3 button {
+  padding: 1em 2.5em;
+  background-color: var(--clr-white);
+  color: var(--clr-purple);
+  border: none;
+  border-radius: 0.5em;
+  font-family: "Red Rose", cursive;
+}
+@media only screen and (min-width: 768px) {
+  .home .section-3 {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .home .section-3 div:has(img) {
+    margin-left: 3em;
+  }
+}
+
+.mkt-item {
+  border-radius: 0.5em;
+  border: 1px solid var(--clr-gray-border);
+  margin: 1em auto;
+  padding: 1em;
+  text-align: left;
+}
+.mkt-item > * + * {
+  margin: 1em 0;
+}
+.mkt-item > *:last-child {
+  margin-bottom: 0;
+}
+.mkt-item > img {
+  display: block;
+  margin: 0 auto;
+}
+.mkt-item .details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mkt-item .details > *:last-child {
+  margin-left: 1.2em;
 }
 
 .footer {

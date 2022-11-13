@@ -3,3 +3,13 @@
     @content;
   }
 }
+
+// HOME SECTIONS
+@mixin hs() {
+  padding: 5vw;
+  max-width: 100vw;
+
+  img {
+    max-width: 100%;
+  }
+}

@@ -13,7 +13,7 @@ export const Header = ({ setModalIsOpen }) => {
             <a href="/">Home</a>
           </li>
           <li>
-            <a href="/placetostay">Place to stay</a>
+            <a href="/marketplace">Place to stay</a>
           </li>
           <li>
             <a href="/">NFTs</a>
