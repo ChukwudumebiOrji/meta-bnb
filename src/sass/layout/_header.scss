@@ -1,0 +1,54 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+  height: 10em;
+
+  > * {
+    display: none;
+  }
+
+  img {
+    display: block;
+  }
+
+  ul {
+    display: flex;
+  }
+
+  li {
+    margin: 0.5em;
+
+    @include mq(map-get($breakpoints, desktop)) {
+      margin: 1em;
+    }
+  }
+
+  div {
+    border-radius: 0.5em;
+    color: var(--clr-white-text);
+    background: linear-gradient(90deg, #a02279 11.45%, #a02279 11.45%);
+    padding: 1em 1.5em;
+  }
+
+  @include mq(map-get($breakpoints, tablet)) {
+    padding: 1.5em 3em;
+
+    > nav {
+      display: contents;
+    }
+
+    > .icon {
+      display: none;
+    }
+
+    div {
+      display: block;
+    }
+  }
+}
+
+.logo {
+  height: 2.5em;
+}

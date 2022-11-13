@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Rose:wght@400;700&display=swap");
+
+:root {
+  @each $clr, $val in $colors {
+    --clr-#{'' + $clr}: #{$val};
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+  font-family: "Red Rose", cursive;
+  font-weight: map-get($map: $font-weights, $key: normal);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.icon {
+  height: 18px;
+}
