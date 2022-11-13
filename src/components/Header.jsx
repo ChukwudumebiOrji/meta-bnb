@@ -1,12 +1,20 @@
-export const Header = ({ setModalIsOpen }) => {
+export const Header = ({ setModalIsOpen, setSidebarIsOpen }) => {
   const handleBtnClick = () => {
     setModalIsOpen(true)
+  }
+  const handleIconClick = () => {
+    setSidebarIsOpen(true)
   }
 
   return (
     <header className="header">
       <img src="/img/meta-logo.svg" alt="" className="logo" />
-      <img src="/icons/menu.svg" alt="" className="icon" />
+      <img
+        src="/icons/menu.svg"
+        alt=""
+        className="icon"
+        onClick={handleIconClick}
+      />
       <nav>
         <ul>
           <li>

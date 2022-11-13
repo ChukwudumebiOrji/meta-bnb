@@ -7,7 +7,7 @@
     div {
       &:last-of-type {
         @include mq(map-get($breakpoints, tablet)) {
-          width: 75%;
+          width: 60%;
         }
       }
     }
@@ -123,7 +123,7 @@
     div {
       &:last-of-type {
         @include mq(map-get($breakpoints, tablet)) {
-          width: 75%;
+          width: 60%;
         }
       }
     }

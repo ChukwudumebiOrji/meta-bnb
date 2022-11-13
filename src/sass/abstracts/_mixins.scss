@@ -4,6 +4,15 @@
   }
 }
 
+// MODAL
+@mixin modal() {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(map-get($colors, black), 0.3);
+  z-index: 10;
+}
+
 // HOME SECTIONS
 @mixin hs() {
   padding: 5vw;
