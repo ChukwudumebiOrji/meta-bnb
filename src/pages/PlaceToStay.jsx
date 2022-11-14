@@ -22,7 +22,7 @@ const PlaceToStay = () => {
   ]
 
   return (
-    <div>
+    <>
       <section className="mkt-grid">
         <nav>
           <ul>
@@ -64,7 +64,7 @@ const PlaceToStay = () => {
           })}
         </div>
       </section>
-    </div>
+    </>
   )
 }
 

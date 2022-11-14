@@ -2,13 +2,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1em 2em;
-  height: 10em;
+  height: fit-content;
+  padding: 12px 25px;
 
   > * {
     display: none;
   }
 
+  a,
   img {
     display: block;
   }
@@ -18,22 +19,22 @@
   }
 
   li {
-    margin: 0.5em;
-
-    @include mq(map-get($breakpoints, desktop)) {
-      margin: 1em;
-    }
+    margin: 0 24px;
+    font-size: 20px;
+    line-height: 25px;
   }
 
   div {
-    border-radius: 0.5em;
+    border-radius: 10px;
     color: var(--clr-white-text);
     background: var(--clr-purple);
-    padding: 1em 1.5em;
+    padding: 15px 26px;
   }
 
-  @include mq(map-get($breakpoints, tablet)) {
-    padding: 1.5em 3em;
+  @include mq(map-get($breakpoints, desktop)) {
+    @include hs();
+    padding-top: 47px;
+    padding-bottom: 47px;
 
     > nav {
       display: contents;
@@ -50,5 +51,12 @@
 }
 
 .logo {
-  height: 2.5em;
+  height: calc(0.5 * 2.5em);
+
+  @include mq(map-get($breakpoints, tablet)) {
+    height: calc(0.75 * 2.5em);
+  }
+  @include mq(map-get($breakpoints, desktop)) {
+    height: 2.5em;
+  }
 }

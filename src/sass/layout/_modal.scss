@@ -2,8 +2,8 @@
   @include modal();
 
   &__content {
-    width: 325px;
-    border-radius: 1em;
+    width: 600px;
+    border-radius: 16px;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -12,7 +12,7 @@
     font-weight: map-get($map: $font-weights, $key: bold);
 
     > * {
-      padding: 1.2em;
+      padding: 24px 32px;
     }
 
     &__header {
@@ -39,7 +39,7 @@
         margin-top: 1em;
 
         &:first-of-type {
-          background-color: mix(map-get($colors, gray-border), #fff);
+          background-color: mix(map-get($colors, gray-border), #fff, 20%);
         }
 
         img {

@@ -1,18 +1,9 @@
 .mkt-item {
-  border-radius: 0.5em;
+  border-radius: 15px;
   border: 1px solid var(--clr-gray-border);
-  margin: 1em auto;
-  padding: 1em;
-  text-align: left;
-  > * {
-    & + * {
-      margin: 1em 0;
-    }
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
+  width: 95vw;
+  margin: 0 auto;
+  padding: 16px;
 
   > img {
     display: block;
@@ -22,10 +13,26 @@
   .details {
     display: flex;
     justify-content: space-between;
+    margin: 10px 0;
     align-items: center;
 
-    > *:last-child {
-      margin-left: 1.2em;
+    p,
+    h4 {
+      font-size: 12px;
+      line-height: 13px;
     }
+
+    &:nth-of-type(1) {
+      text-transform: capitalize;
+      margin-top: 16px;
+    }
+    & *:last-child {
+      text-align: right;
+    }
+  }
+
+  @include mq(map-get($breakpoints, tablet)) {
+    width: 292px;
+    height: 372px;
   }
 }

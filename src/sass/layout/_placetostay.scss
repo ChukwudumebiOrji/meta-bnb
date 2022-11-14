@@ -1,44 +1,63 @@
 .mkt-grid {
-  @include hs();
-
   nav {
     display: contents;
 
     ul {
+      width: 100%;
       display: flex;
       align-items: center;
       flex-wrap: wrap;
-      width: 100%;
+      font-size: 0.5rem;
+      padding: 0 5vw;
 
       @include mq(map-get($breakpoints, tablet)) {
-        justify-content: space-between;
+        font-size: 1rem;
+        @include hs() // padding: 0;
+;
       }
     }
 
     li {
-      margin: 1em;
+      & + li {
+        margin-left: 24px;
+        @include mq(map-get($breakpoints, tablet)) {
+          margin-left: 48px;
+        }
+      }
+      &:last-of-type {
+        margin-left: 32.5px;
+        padding: 7px;
+        border-radius: 4px;
+        border: 1px solid var(--clr-gray-border);
 
-      &:has(img) {
-        display: flex;
-        align-items: center;
-        border: 1px solid var(--clr-black);
-        padding: 0.5em;
+        @include mq(map-get($breakpoints, tablet)) {
+          padding: 14px;
+          border-radius: 8px;
+          margin-left: 65px;
+        }
       }
 
       img {
-        margin-left: 1em;
+        margin-left: 40px;
         height: 12px;
       }
     }
   }
 
   .mkt-items {
+    display: grid;
+    gap: 24px;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+
     @include mq(map-get($breakpoints, tablet)) {
-      display: grid;
       grid-template-columns: repeat(2, 1fr);
+      margin-top: 64px;
+      margin-bottom: 92px;
     }
 
     @include mq(map-get($breakpoints, desktop)) {
+      @include hs();
       grid-template-columns: repeat(4, 1fr);
     }
   }

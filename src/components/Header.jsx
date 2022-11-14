@@ -1,3 +1,5 @@
+import { useNavigate } from "react-router-dom"
+
 export const Header = ({ setModalIsOpen, setSidebarIsOpen }) => {
   const handleBtnClick = () => {
     setModalIsOpen(true)
@@ -7,8 +9,11 @@ export const Header = ({ setModalIsOpen, setSidebarIsOpen }) => {
   }
 
   return (
-    <header className="header">
-      <img src="/img/meta-logo.svg" alt="" className="logo" />
+    <div className="header">
+      <a href="">
+        <img src="/img/meta-logo.svg" alt="" className="logo" />
+      </a>
+
       <img
         src="/icons/menu.svg"
         alt=""
@@ -32,6 +37,6 @@ export const Header = ({ setModalIsOpen, setSidebarIsOpen }) => {
         </ul>
       </nav>
       <div onClick={handleBtnClick}>Connect wallet</div>
-    </header>
+    </div>
   )
 }
